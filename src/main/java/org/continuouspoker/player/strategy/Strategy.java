@@ -13,7 +13,7 @@ public class Strategy {
         System.out.println(table);
 
         var me = table.getPlayers().get(table.getActivePlayer());
-        var handValue = HandEvaluation.getScore(table);
+        var handValue = HandEvaluation.getScore(table) * (6f - table.getCommunityCards().size()) / 6f;
         handValue = (float) Math.pow(handValue, 0.6f);
         var stackedHandValue = me.getStack() * handValue;
         return new Bet().bet((int) stackedHandValue);
