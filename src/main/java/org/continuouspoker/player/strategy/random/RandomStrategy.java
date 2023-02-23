@@ -1,4 +1,4 @@
-package org.continuouspoker.player.logic;
+package org.continuouspoker.player.strategy.random;
 
 import org.continuouspoker.player.model.Bet;
 import org.continuouspoker.player.model.Table;
