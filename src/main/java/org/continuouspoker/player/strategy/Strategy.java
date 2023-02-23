@@ -14,7 +14,7 @@ public class Strategy {
 
         var me = table.getPlayers().get(table.getActivePlayer());
         var handValue = HandEvaluation.getScore(table);
-        handValue = handValue * handValue;
+        handValue = (float) Math.pow(handValue, 0.6f);
         var stackedHandValue = me.getStack() * handValue;
         return new Bet().bet((int) stackedHandValue);
         // return RandomStrategy.calc(table);
